@@ -1,15 +1,90 @@
 body {
   margin: 0;
   padding: 0;
+  display: initial;
+}
+
+h2 {
+  text-align: center;
+}
+
+#header {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #66A2BA;
+  top: 0;
+  z-index: 888;
+  padding: 0 20px 0 20px;
+}
+
+#header #header-img {
+  height: 50px;
+}
+
+#header .mobile img {
+  height: 25px;
+}
+
+#header .desktop {
+  display: none;
+}
+
+#header #floating-menu {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  background-color: #66A2BA;
+  width: 200px;
+  height: 200px;
+  right: 0;
+  top: 0;
+  color: white;
+  padding: 20px;
+  -webkit-box-flex: unset;
+      -ms-flex-positive: unset;
+          flex-grow: unset;
+}
+
+#header #floating-menu img {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#header #floating-menu a {
+  text-decoration: none;
+  line-height: 150%;
+  text-align: center;
+  padding: 10px;
+  display: block;
+  margin-top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 90%;
   margin: 20px;
   -webkit-box-align: center;
@@ -17,15 +92,41 @@ body {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  position: relative;
 }
 
 .hero .hero-part1 video {
-  width: 35vw;
+  width: 85vw;
   border-radius: 10px;
 }
 
 .hero .hero-part2 {
-  width: 40vw;
+  text-align: center;
+  width: 80vw;
+}
+
+.hero .hero-part2 label {
+  margin-bottom: 30px;
+}
+
+.hero .hero-part2 input {
+  border-radius: 5px;
+  height: 30px;
+  width: 70%;
+  padding: 10px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 20px;
+  border: 1px solid grey;
+}
+
+.hero .hero-part2 button {
+  height: 30px;
+  width: 70px;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
 }
 
 #inspirations {
@@ -45,6 +146,18 @@ body {
           align-items: center;
   width: 90%;
   margin: auto;
+  margin-top: 20px;
+}
+
+#inspirations #inspirationImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #inspirations .imgInsp {
@@ -75,14 +188,15 @@ body {
   -webkit-box-flex: unset;
       -ms-flex-positive: unset;
           flex-grow: unset;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
   margin: auto;
+  margin-top: 20px;
 }
 
 #testimonial h2 {
@@ -101,9 +215,8 @@ body {
 }
 
 #testimonial .testimonial-item {
-  width: 150px;
+  width: 80vw;
   overflow: hidden;
-  border: 1px solid gold;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,12 +228,13 @@ body {
   -webkit-box-flex: unset;
       -ms-flex-positive: unset;
           flex-grow: unset;
-  margin: 10px;
+  margin: 20px;
   overflow: visible;
   margin-bottom: 100px;
   border-radius: 15px;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffd700), color-stop(#b0c72a), color-stop(#6db046), color-stop(#349458), to(#00765d));
-  background-image: linear-gradient(to right bottom, #ffd700, #b0c72a, #6db046, #349458, #00765d);
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#66a2ba), color-stop(#578ea4), color-stop(#487b8f), color-stop(#3a687b), to(#2c5667));
+  background-image: linear-gradient(to right top, #66a2ba, #578ea4, #487b8f, #3a687b, #2c5667);
+  color: white;
 }
 
 #testimonial .testimonial-item .testimonial-img {
@@ -135,5 +249,55 @@ body {
   text-align: center;
   font-size: 0.8rem;
   padding: 10px;
+}
+
+#contact {
+  width: 90%;
+  margin: auto;
+}
+
+#contact p {
+  padding: 10px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  #header {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  #header .mobile {
+    display: none;
+  }
+  #header .desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-right: 20px;
+  }
+  #header .desktop a {
+    text-decoration: none;
+  }
+  .hero {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .hero .hero-part1 video {
+    width: 45vw;
+  }
+  .hero .hero-part2 {
+    width: 40vw;
+  }
+  #testimonial .testimonial-item {
+    width: 20vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */

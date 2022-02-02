@@ -13,11 +13,19 @@
 <body>
     <header id="header">
         <div class="logo">
-            <!-- <img id="header-img" src="images/logo copy.png"> -->
+            <img id="header-img" src="images/logo.png">
             
         </div>
         
-        <nav id="nav-bar">
+        <nav class="mobile"><img src="images/icons8-horizontal-separated-bars-representing-hamburger-menu-layout-50.png"></nav>
+        <nav id="floating-menu">
+            <img id="closeMenu" src="images/icons8-horizontal-separated-bars-representing-hamburger-menu-layout-50.png">
+            
+            <a href="#inspirations">Inspirations</a>
+            <a href="#testimonial">Students Testimonials</a>
+            <a href="#contact">Contact us</a>
+        </nav>
+        <nav id="nav-bar" class="desktop">
             <!-- User Story #4: I can see at least three clickable elements inside the nav element, each with the class nav-link. -->
             <a class="nav-link desktop" href="#inspirations">Inspirations</a>
             <a class="nav-link desktop" href="#testimonial">Students Testimonials</a>
@@ -44,13 +52,13 @@
 
 
     <section id="inspirations">
-        <h2>Countless of interesting items that You can make by having sewing skill</h2>
+        <h2>Countless Of Interesting Items That You Can Make By Having Sewing Skill</h2>
         <div id="inspirationImg"></div>
-        <div class="disclaimer">Pictures are courtesy of Pinterest</div>
+        <div class="disclaimer"><strong>Disclaimer: </strong>Pictures are courtesy of Pinterest</div>
     </section>
   
     <section id='testimonial'>
-        <h2>Testimonials from the students</h2><br>
+        <h2>Testimonials From The Students</h2><br>
         <div class="testimoni">
            
         </div>
@@ -58,16 +66,14 @@
     
     <section id="contact">
         <h2>Contact Us</h2>
+        <p>9932 Harvard Street <br>
+            Norristown, PA 19401</p>
     </section>
 
-    <footer>
-        <span>cuteFabrix</span>
-        <span>facebook</span>
-        <span>instagram</span>
-    </footer>
+   
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 <script src="app.js"></script>
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 </body>
 </html>

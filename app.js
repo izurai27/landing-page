@@ -44,4 +44,13 @@ const testimonialArr=[
 
 const testimonial = document.querySelector('.testimoni');
 testimonial.innerHTML = testimonialArr.map(arr => `<div class="testimonial-item"><img class="testimonial-img" src=${arr.img}><div class="testimonial-note">${arr.note}</div></div>`).join('');
-// console.log(coba);
+
+
+const mobileMenu = document.querySelector('.mobile');
+const menuFloat = document.querySelector('#floating-menu');
+const closeMenu = document.querySelector('#closeMenu');
+
+mobileMenu.addEventListener("click",() => menuFloat.style.display='block');
+closeMenu.addEventListener("click",() => menuFloat.style.display='none');
+
+console.log(mobileMenu,menuFloat,closeMenu)
